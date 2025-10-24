@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - Mildrei Rivera</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+       <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: linear-gradient(135deg, #03045e 0%, #0077b6 100%); box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html" style="font-size: 1.5rem; letter-spacing: 1px;">
+                <i class="fas fa-code me-2"></i>Mi Portafolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active px-3" href="index.html" style="transition: all 0.3s;">
+                            <i class="fas fa-home me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#habilidades" style="transition: all 0.3s;">
+                            <i class="fas fa-lightbulb me-1"></i>Habilidades
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="projects.html" style="transition: all 0.3s;">
+                            <i class="fas fa-folder-open me-1"></i>Proyectos
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#sobre-mi" style="transition: all 0.3s;">
+                            <i class="fas fa-user me-1"></i>Sobre mí
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#contacto" style="transition: all 0.3s;">
+                            <i class="fas fa-envelope me-1"></i>Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        /* Efecto hover en los enlaces del navbar */
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(224, 201, 201, 0.1);
+            border-radius: 5px;
+            transform: translateY(-2px);
+        }
+        
+        .navbar-nav .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        
+        .navbar-brand:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+    </style>
+
+      </style>
+
+
+
+     <!-- HEADER - Encabezado principal -->
+    <header class="text-white text-center py-5" style="background: linear-gradient(135deg,#a2d2ff 100%); min-height: 400px; display: flex; align-items: center;">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                Mildrei Rivera
+            </h1>
+            <p class="lead mb-4" style="font-size: 1.5rem;">
+                Desarrollador Web | Estudiante | Apasionado por la tecnología
+            </p>
+            <a href="#sobre-mi" class="btn btn-light btn-lg px-4 me-2" style="border-radius: 50px;">
+                <i class="fas fa-user me-2"></i>Conoce más
+            </a>
+            <a href="projects.html" class="btn btn-outline-light btn-lg px-4" style="border-radius: 50px;">
+                <i class="fas fa-folder-open me-2"></i>Ver Proyectos
+            </a>
+        </div>
+    </header>
+
+     <!-- HEADER - Encabezado principal -->
+    <header class="py-5" style="background-color: #a2d2ff; min-height: 500px; display: flex; align-items: center;">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Columna de texto (izquierda) -->
+                <div class="col-lg-7 text-start">
+                    <h1 class="display-3 fw-bold mb-3" style="color: #03045e;">
+                        ¡Bienvenido a mi Portafolio!
+                    </h1>
+                    <p class="lead mb-4" style="font-size: 1.5rem; color: #023e8a;">
+                        Desarrollador Web | Estudiante | Apasionado por la tecnología
+                    </p>
+                    <a href="#sobre-mi" class="btn btn-lg px-4 me-2" style="background-color: #03045e; color: white; border-radius: 50px; border: none;">
+                        <i class="fas fa-user me-2"></i>Conoce más
+                    </a>
+                    <a href="projects.html" class="btn btn-lg px-4" style="background-color: transparent; color: #03045e; border: 2px solid #03045e; border-radius: 50px;">
+                        <i class="fas fa-folder-open me-2"></i>Ver Proyectos
+                    </a>
+                </div>
+                
+                <!-- Columna de imagen (derecha) -->
+                <div class="col-lg-5 text-center mt-4 mt-lg-0">
+                    <div style="width: 300px; height: 300px; margin: 0 auto; background-color: #0077b6; border-radius: 50%; overflow: hidden; box-shadow: 0 10px 30px rgba(3, 4, 94, 0.3); display: flex; align-items: center; justify-content: center;">
+                        <!-- Placeholder para tu imagen -->
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #023e8a 0%, #0077b6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; text-align: center; padding: 20px;">
+                            <div>
+                                <i class="fas fa-user-circle fa-5x mb-3"></i>
+                                <p class="mb-0">Coloca aquí tu foto</p>
+                                <small style="font-size: 0.8rem; opacity: 0.8;">(Reemplaza con: images/tu-foto.jpg)</small>
+                            </div>
+                        </div>
+                        <!-- Cuando tengas tu foto, reemplaza el div de arriba con:
+                        <img src="images/tu-foto.jpg" alt="Mi foto" style="width: 100%; height: 100%; object-fit: cover;">
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
