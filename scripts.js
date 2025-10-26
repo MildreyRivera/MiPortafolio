@@ -127,3 +127,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ===================================
+// ANIMACIÓN FLIP CARD (CARTA GIRANDO)
+// ===================================
+
+// Girar la carta al hacer click
+const flipCard = document.getElementById('flipCard');
+
+if (flipCard) {
+    flipCard.addEventListener('click', function() {
+        this.classList.toggle('flipped');
+    });
+    
+    // Auto-girar la carta después de 3 segundos (opcional)
+    setTimeout(() => {
+        flipCard.classList.add('flipped');
+        
+        // Volver a girar después de 3 segundos
+        setTimeout(() => {
+            flipCard.classList.remove('flipped');
+        }, 3000);
+    }, 3000);
+}
