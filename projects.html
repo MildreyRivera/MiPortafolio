@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Mildrei Rivera</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR - Menú de navegación dinámico -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold mx-auto mx-lg-0" href="index.html">
+                Portafolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="index.html">
+                            <i class="fas fa-home me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="index.html#sobre-mi">
+                            <i class="fas fa-user me-1"></i>Sobre mí
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="index.html#habilidades">
+                            <i class="fas fa-lightbulb me-1"></i>Habilidades
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-3" href="projects.html">
+                            <i class="fas fa-folder-open me-1"></i>Proyectos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="index.html#contacto">
+                            <i class="fas fa-envelope me-1"></i>Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER DE PROYECTOS -->
+    <header class="py-5" style="background-color: #a2d2ff;">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold" style="color: #03045e;">Mis Proyectos</h1>
+            <p class="lead" style="color: #023e8a;">Una colección de mis trabajos más destacados</p>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE PROYECTOS -->
+    <section class="py-5" style="background: linear-gradient(135deg, #03045e 0%, #0077b6 100%);">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- PROYECTO 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100" style="background: rgba(255, 255, 255, 0.1); border: none; border-radius: 15px; backdrop-filter: blur(10px);">
+                        <div class="card-body text-white">
+                            <div class="mb-3">
+                                <i class="fas fa-laptop-code fa-3x" style="color: #a2d2ff;"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Proyecto 1: Sistema de Gestión</h5>
+                            <p class="card-text">Sistema web desarrollado con .NET para la gestión de inventarios y ventas. Incluye autenticación de usuarios y reportes dinámicos.</p>
+                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalProyecto1">
+                                <i class="fas fa-play-circle me-2"></i>Ver Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100" style="background: rgba(255, 255, 255, 0.1); border: none; border-radius: 15px; backdrop-filter: blur(10px);">
+                        <div class="card-body text-white">
+                            <div

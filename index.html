@@ -9,17 +9,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Font Awesome para íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Tu CSS personalizado -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- NAVBAR - Menú de navegación dinámico -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: linear-gradient(135deg, #03045e 0%, #0077b6 100%); box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold mx-auto mx-lg-0" href="index.html" style="font-size: 1.5rem; letter-spacing: 1px;">
+            <a class="navbar-brand fw-bold mx-auto mx-lg-0" href="index.html">
                 Portafolio
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -28,27 +28,27 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active px-3" href="index.html" style="transition: all 0.4s; position: relative;">
+                        <a class="nav-link active px-3" href="index.html">
                             <i class="fas fa-home me-1"></i>Inicio
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="#sobre-mi" style="transition: all 0.4s; position: relative;">
+                        <a class="nav-link px-3" href="#sobre-mi">
                             <i class="fas fa-user me-1"></i>Sobre mí
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="#habilidades" style="transition: all 0.4s; position: relative;">
+                        <a class="nav-link px-3" href="#habilidades">
                             <i class="fas fa-lightbulb me-1"></i>Habilidades
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="projects.html" style="transition: all 0.4s; position: relative;">
+                        <a class="nav-link px-3" href="projects.html">
                             <i class="fas fa-folder-open me-1"></i>Proyectos
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="#contacto" style="transition: all 0.4s; position: relative;">
+                        <a class="nav-link px-3" href="#contacto">
                             <i class="fas fa-envelope me-1"></i>Contacto
                         </a>
                     </li>
@@ -57,246 +57,106 @@
         </div>
     </nav>
 
-    <style>
-        /* Animación de línea inferior en hover */
-        .navbar-nav .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 3px;
-            background-color: #a2d2ff;
-            transition: all 0.4s ease;
-            transform: translateX(-50%);
-        }
-        
-        .navbar-nav .nav-link:hover::after {
-            width: 80%;
-        }
-        
-        /* Efecto de escala y brillo en hover */
-        .navbar-nav .nav-link:hover {
-            transform: scale(1.1);
-            color: #a2d2ff !important;
-        }
-        
-        /* Estilo para el enlace activo */
-        .navbar-nav .nav-link.active {
-            color: #a2d2ff !important;
-            font-weight: 600;
-        }
-        
-        .navbar-nav .nav-link.active::after {
-            width: 80%;
-            background-color: #f1faee;
-        }
-        
-        /* Animación de los íconos */
-        .navbar-nav .nav-link:hover i {
-            animation: iconBounce 0.6s ease;
-        }
-        
-        @keyframes iconBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-        }
-        
-        /* Animación del logo */
-        .navbar-brand {
-            transition: all 0.3s ease;
-        }
-        
-        .navbar-brand:hover {
-            transform: scale(1.08) rotate(-2deg);
-            color: #f1faee !important;
-        }
-        
-        .navbar-brand:hover i {
-            animation: logoSpin 0.6s ease;
-        }
-        
-        @keyframes logoSpin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Cursor parpadeante para el typewriter */
-        #typewriter::after {
-            content: '|';
-            animation: blink 0.7s infinite;
-            margin-left: 2px;
-        }
-        
-        @keyframes blink {
-            0%, 49% { opacity: 1; }
-            50%, 100% { opacity: 0; }
-        }
-        
-        /* Animación fade-in para el subtítulo */
-        .fade-in-text {
-            animation: fadeIn 1.5s ease-in forwards;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
-
     <!-- HEADER - Encabezado principal -->
-    <header class="py-5" style="background-color: #a2d2ff; min-height: 500px; display: flex; align-items: center;">
+    <header class="header-main">
         <div class="container">
-            <div class="row align-items-center">
-                <!-- Columna de texto (izquierda) -->
-                <div class="col-lg-7 text-start">
-                    <h1 class="display-3 fw-bold mb-3" id="typewriter" style="color: #03045e; min-height: 90px;">
-                        <!-- El texto se escribirá aquí con JavaScript -->
-                    </h1>
-                    <p class="lead mb-4 fade-in-text fw-bold mb-" style="font-size: 1.6rem; color: #023e8a; opacity: 0;">
-                        Desarrollador Web | Estudiante con mente técnica, código con el toque artistico.
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="display-3 fw-bold" id="typewriter"></h1>
+                    <p class="lead mb-4 fade-in-text fw-bold subtitle">
+                        Desarrollador Web | Estudiante con mente técnica, código con el toque artístico.
                     </p>
-
-                    <a href="#sobre-mi" class="btn btn-lg px-4 me-2" style="background-color: #03045e; color: white; border-radius: 50px; border: none; opacity: 0; animation: fadeInUp 1s ease-in forwards; animation-delay: 3s;">
+                    <a href="#sobre-mi" class="btn btn-custom btn-lg px-4 me-2">
                         <i class="fas fa-user me-2"></i>Conoce más
                     </a>
-                    <a href="projects.html" class="btn btn-lg px-4" style="background-color: transparent; color: #03045e; border: 2px solid #03045e; border-radius: 50px; opacity: 0; animation: fadeInUp 1s ease-in forwards; animation-delay: 3.2s;">
+                    <a href="projects.html" class="btn btn-custom btn-lg px-4">
                         <i class="fas fa-folder-open me-2"></i>Ver Proyectos
                     </a>
-                </div>
-                
-                <!-- Columna de imagen (derecha) -->
-                <div class="col-lg-5 text-center mt-4 mt-lg-0">
-                    <div style="width: 320px; height: 380px; margin: 0 auto; background-color: #0077b6; border-radius: 25px; overflow: hidden; box-shadow: 0 10px 30px rgba(3, 4, 94, 0.3); display: flex; align-items: center; justify-content: center;">
-                        <!-- Placeholder para tu imagen -->
-                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #023e8a 0%, #0077b6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; text-align: center; padding: 20px;">
-                            <div>
-                                <i class="fas fa-user fa-5x mb-3"></i>
-                                <p class="mb-0 fw-bold">Coloca aquí tu foto</p>
-                                <small style="font-size: 0.8rem; opacity: 0.8;">(Reemplaza con: images/tu-foto.jpg)</small>
-                            </div>
-                        </div>
-                        <!-- Cuando tengas tu foto, reemplaza el div de arriba con:
-                        <img src="images/tu-foto.jpg" alt="Mi foto" style="width: 100%; height: 100%; object-fit: cover;">
-                        -->
-                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- SECCIÓN: SOBRE MÍ -->
-    <section id="sobre-mi" class="py-5" style="background: linear-gradient(135deg, #03045e 0%, #0077b6 100%); box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <section id="sobre-mi" class="section-sobre-mi">
         <div class="container">
-            <h2 class="text-center fw-bold mb-4" style="font-size: 1.9rem;  color: #f1faee; min-height: 90px;">Sobre Mí</h2>
-            <div class="row col-md-8 text-start">
-                <div class="col-md-9 mx-auto">
-                    <p  class="lead mb-3 fade-in-text" style="font-size: 1.6rem; color: #f1faee; opacity: 0;">
-                        Soy Mildrei Rivera, estudiante de Desarrollo de Software apasionado por crear 
-                        soluciones web innovadoras. Me especializo en .NET, HTML, CSS.
-                        Siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades.
-                    </p>
-                    <p class="lead mb-4 fade-in-text" style="font-size: 1.6rem; color: #f1faee; opacity: 0;">
-                        En este portafolio podrás encontrar algunos de mis proyectos más destacados 
-                        y conocer más sobre mis habilidades técnicas.
-                    </p>
+            <h2 class="text-center mb-5 text-white">Sobre Mí</h2>
+            <div class="row align-items-center">
+                <!-- Columna de imagen -->
+                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                    <div class="foto-container">
+                        <div class="foto-placeholder">
+                            <div>
+                                <i class="fas fa-user fa-5x mb-3"></i>
+                                <p class="mb-0 fw-bold">Coloca aquí tu foto</p>
+                                <small>(Reemplaza con: images/tu-foto.jpg)</small>
+                            </div>
+                        </div>
+                        <!-- Cuando tengas tu foto, reemplaza el div de arriba con:
+                        <img src="images/tu-foto.jpg" alt="Mi foto" class="foto-img">
+                        -->
+                    </div>
+                </div>
+                
+                <!-- Columna de texto -->
+                <div class="col-lg-8 text-start">
+                    <p class="text-white" id="typewriter-p1"></p>
+                    <p class="text-white" id="typewriter-p2"></p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SECCIÓN: HABILIDADES -->
-    <section id="habilidades" class="py-5 bg-light">
+    <section id="habilidades" class="section-habilidades">
         <div class="container">
-            <h2 class="text-center mb-5">Habilidades Técnicas</h2>
-            <div class="row text-center">
+            <h2 class="text-center mb-5" id="typewriter-habilidades"></h2>
+            <div class="row text-center justify-content-center">
+                
+                <!-- .NET -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 skill-card skill-float-2">
+                        <div class="card-body">
+                            <i class="fas fa-laptop-code fa-4x mb-3" style="color: #b197fc;"></i>
+                            <h5 class="card-title text-white">.NET</h5>
+                            <p class="card-text text-white">Framework de desarrollo de Microsoft</p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- HTML -->
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100 skill-card skill-float-1">
                         <div class="card-body">
-                            <i class="fab fa-html5 fa-4x text-danger mb-3"></i>
-                            <h5 class="card-title">HTML5</h5>
-                            <p class="card-text">Estructura semántica y accesible</p>
+                            <i class="fab fa-html5 fa-4x mb-3" style="color: #ff6b6b;"></i>
+                            <h5 class="card-title text-white">HTML5</h5>
+                            <p class="card-text text-white">Estructura semántica y accesible</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- CSS -->
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100 skill-card skill-float-2">
                         <div class="card-body">
-                            <i class="fab fa-css3-alt fa-4x text-primary mb-3"></i>
-                            <h5 class="card-title">CSS3</h5>
-                            <p class="card-text">Diseño responsivo y animaciones</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Bootstrap -->
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <i class="fab fa-bootstrap fa-4x text-purple mb-3" style="color: #7952b3;"></i>
-                            <h5 class="card-title">Bootstrap</h5>
-                            <p class="card-text">Framework para desarrollo ágil</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- JavaScript -->
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <i class="fab fa-js fa-4x text-warning mb-3"></i>
-                            <h5 class="card-title">JavaScript</h5>
-                            <p class="card-text">Interactividad y funcionalidad</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Git -->
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <i class="fab fa-git-alt fa-4x text-danger mb-3"></i>
-                            <h5 class="card-title">Git</h5>
-                            <p class="card-text">Control de versiones</p>
+                            <i class="fab fa-css3-alt fa-4x mb-3" style="color: #4dabf7;"></i>
+                            <h5 class="card-title text-white">CSS3</h5>
+                            <p class="card-text text-white">Diseño responsivo y animaciones</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- GitHub -->
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100 skill-card skill-float-1">
                         <div class="card-body">
-                            <i class="fab fa-github fa-4x text-dark mb-3"></i>
-                            <h5 class="card-title">GitHub</h5>
-                            <p class="card-text">Colaboración y repositorios</p>
+                            <i class="fab fa-github fa-4x mb-3" style="color: #ffffff;"></i>
+                            <h5 class="card-title text-white">GitHub</h5>
+                            <p class="card-text text-white">Colaboración y repositorios</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Responsive Design -->
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <i class="fas fa-mobile-alt fa-4x text-info mb-3"></i>
-                            <h5 class="card-title">Diseño Responsive</h5>
-                            <p class="card-text">Adaptable a todos los dispositivos</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- jQuery -->
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <i class="fas fa-code fa-4x text-success mb-3"></i>
-                            <h5 class="card-title">jQuery</h5>
-                            <p class="card-text">Manipulación del DOM simplificada</p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -326,54 +186,14 @@
         </div>
     </footer>
 
-    <!-- jQuery (necesario para los modales) -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Animación de escritura (Typewriter) -->
-    <script>
-        // Efecto de escritura para el título
-        const textoCompleto = "Mildrei Rivera";
-        const elementoTypewriter = document.getElementById("typewriter");
-        let indice = 0;
-        
-        function escribirTexto() {
-            if (indice < textoCompleto.length) {
-                elementoTypewriter.textContent += textoCompleto.charAt(indice);
-                indice++;
-                setTimeout(escribirTexto, 150); // Velocidad de escritura (150ms por letra)
-            } else {
-                // Cuando termina de escribir, muestra el subtítulo
-                document.querySelector('.fade-in-text').style.opacity = '1';
-            }
-        }
-        
-        // Iniciar la animación cuando carga la página
-        window.addEventListener('load', function() {
-            setTimeout(escribirTexto, 500); // Espera 500ms antes de comenzar
-        });
-    </script>
-    
-    <style>
-        /* Animación de los botones */
-        @keyframes fadeInUp {
-            from { 
-                opacity: 0; 
-                transform: translateY(30px); 
-            }
-            to { 
-                opacity: 1; 
-                transform: translateY(0); 
-            }
-        }
-    </style>
-    
     <!-- Tu JavaScript personalizado -->
-    <script src="js/scripts.js"></script>
+    <script src="scripts.js"></script>
 
 </body>
 </html>
-
-    
