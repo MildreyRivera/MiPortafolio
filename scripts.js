@@ -150,3 +150,65 @@ if (flipCard) {
         }, 3000);
     }, 3000);
 }
+
+// ===================================
+// ANIMACIONES DE PROYECTOS (projects.html)
+// ===================================
+
+function animateProjects() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    if (projectCards.length > 0) {
+        // Animar cada tarjeta con delay
+        projectCards.forEach((card, index) => {
+            setTimeout(() => {
+                // Animar la tarjeta principal
+                card.classList.add('animate-in');
+                
+                // Animar los badges después de que aparezca la tarjeta
+                setTimeout(() => {
+                    const badges = card.querySelectorAll('.badge');
+                    badges.forEach((badge, badgeIndex) => {
+                        setTimeout(() => {
+                            badge.classList.add('animate-badge');
+                        }, badgeIndex * 100); // 100ms entre cada badge
+                    });
+                }, 400); // Esperar 400ms después de que aparezca la tarjeta
+                
+            }, index * 300); // 300ms entre cada tarjeta
+        });
+    }
+}
+
+// Observer para detectar cuando las tarjetas están visibles
+function setupProjectObserver() {
+    const projectSection = document.querySelector('.projects-section');
+    
+    if (projectSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateProjects();
+                    observer.unobserve(entry.target); // Solo animar una vez
+                }
+            });
+        }, {
+            threshold: 0.2 // Animar cuando el 20% de la sección sea visible
+        });
+        
+        observer.observe(projectSection);
+    }
+}
+
+// Ejecutar animaciones de proyectos si estamos en projects.html
+if (window.location.pathname.includes('projects.html') || 
+    document.querySelector('.projects-section')) {
+    
+    // Si ya está cargado, ejecutar inmediatamente
+    if (document.readyState === 'complete') {
+        setupProjectObserver();
+    } else {
+        // Si no, esperar a que cargue
+        window.addEventListener('load', setupProjectObserver);
+    }
+}
